@@ -15,10 +15,10 @@
 #define not 0
 
 
-void man(int sock);										//function for explaining main functions of server
+void man(int sock);									//function for explaining MSG command
 void do_it(int sock);									//function for working with client
 void complain(int sock);								//function for printing error when not logged
-void help(int sock);									//function for explaining MSG command
+void help(int sock);									//function for explaining how to use program
 
 static void eror(const char *e)							
 {
@@ -28,11 +28,11 @@ static void eror(const char *e)
 
 int main()
 {
-  int r;												//r is used for storing returning values of functions && checking returning values
-  int sockfd;											//socket descriptor of server					
-  int newsock;											//socket descriptor of client
+  int r;										//r is used for storing returning values of functions && checking returning values
+  int sockfd;										//socket descriptor of server					
+  int newsock;										//socket descriptor of client
   struct sockaddr_in serv, cli;							
-  sockfd=socket(AF_INET, SOCK_STREAM, 0);				//creating server socket
+  sockfd=socket(AF_INET, SOCK_STREAM, 0);						//creating server socket
   if(sockfd==-1)					
     eror("Socket() err");
   serv.sin_family=AF_INET;
