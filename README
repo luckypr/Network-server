@@ -1,0 +1,29 @@
+*******************************************************************
+
+                SIMPLE NETWORK SERVER
+
+PREREQUISITES FOR COMPILING:
+        * GCC compiler
+        * sqlite3 and sqlite3 headers
+
+SERVER USAGE:
+        Available options:
+                LOG=Log in
+                USR=List all users on server
+                ALL=List all files on server
+                MSG=Send message to one user
+                BOX=Read your inbox
+                GET=Download file from server
+                PUT=Upload file to server
+                OUT=Log out
+                MAN=used for details about server usage
+
+
+        NOTES:
+                * In order to use other functions, you need to Log in first.
+                * Server is using select() system call to  communicate with multiple clients!
+                * Server is connected with sqlite3 database. 
+                * Before running server and client, you MUST create database.
+                * Run sqlite3 srvdb.db < create.sql to create all tables and one user 
+                * If both,server and client run on same computer, just type ./srv or ./client
+                * If you run client on different machine, type ./client [ip_addr_of_server]
